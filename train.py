@@ -176,7 +176,8 @@ if __name__ == '__main__':
     # load data, include one or multiple datasets
     # dataset_names = ['dataset_home_lab(L).mat', 'dataset_home_lab(R).mat', 'dataset_lecture_room.mat', 'dataset_living_room.mat'
     #                ,'dataset_meeting_room.mat']
-    dataset_names = [ 'dataset_meeting_room.mat', 'dataset_lecture_room.mat']
+    dataset_names = [ 'dataset_home_lab(L).mat', 'dataset_home_lab(R).mat', 'dataset_lecture_room.mat', 'dataset_living_room.mat'
+                    ,'dataset_meeting_room.mat']
 
 
     for idx in range(len(dataset_names)):
