@@ -16,7 +16,8 @@ if __name__ == '__main__':
     # load data, include one or multiple datasets
     # dataset_names = ['dataset_home_lab(L).mat', 'dataset_home_lab(R).mat', 'dataset_lecture_room.mat',
     #                  'dataset_living_room.mat', 'dataset_meeting_room.mat']
-    dataset_names = ['dataset_meeting_room.mat','dataset_lecture_room.mat']
+    dataset_names = ['dataset_home_lab(L).mat', 'dataset_home_lab(R).mat', 'dataset_lecture_room.mat',
+                      'dataset_living_room.mat', 'dataset_meeting_room.mat']
     for idx in range(len(dataset_names)):
         data = sio.loadmat(dataset_names[idx])
         if 'data_all' in locals():
@@ -63,7 +64,7 @@ if __name__ == '__main__':
         nn.Dropout(0.5),
         nn.Linear(256, num_classes),
     )
-    testmodel.load_state_dict(torch.load('ENetmod_pretrained.pth'))
+    testmodel.load_state_dict(torch.load('B0(modified)_trained_with_all_data.pth'))
     to_device(testmodel, device)
     num_incorrect_pred = 0
     testmodel.eval()
